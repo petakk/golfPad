@@ -30,6 +30,7 @@ public class WicketApplication extends WebApplication
 		return new GolferSession(request);
 	}
 
+
 	@Override
 	protected void init()
 	{
@@ -56,5 +57,6 @@ public class WicketApplication extends WebApplication
 		mountPage("home", HomePage.class);
 		mountPage("singOut", SignOutPage.class);
 		mountPage("golfer", GolferPage.class);
+		mountPage("golfer-add", GolferAddPage.class);
 	}
 }

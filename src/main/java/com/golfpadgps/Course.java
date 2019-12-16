@@ -29,6 +29,15 @@ public class Course implements Serializable {
 
     }
 
+    public Golfer newGolfer() {
+        Golfer golfer = new Golfer("", 0, 0);
+        return golfer;
+    }
+
+    public void addGolfer(Golfer golfer){
+        golfers.add(golfer);
+    }
+
     public String getTitle() {
         return title;
     }

@@ -38,12 +38,14 @@ public class HomePage extends AuthenticatedWebPage {
 			public void populateItem(final ListItem<Golfer> listItem)
 			{
 				final Golfer golfer = listItem.getModelObject();
-				listItem.add(new BookmarkablePageLink<Void>("details", GolferPage.class, new PageParameters().add("id", golfer)).add(new Label("golfer", new PropertyModel<>(listItem.getModel(), "name"))));
+				listItem.add(new BookmarkablePageLink<Void>("details", GolferPage.class, new PageParameters().add("id", golfer.getId())).add(new Label("golfer", new PropertyModel<>(listItem.getModel(), "name"))));
 				listItem.add(new Label("age", new PropertyModel(listItem.getModel(), "age")));
 				listItem.add(new Label("handicap", new PropertyModel(listItem.getModel(), "handicap")));
 				listItem.add(new Label("handicapIndex", new PropertyModel(listItem.getModel(), "handicapIndex")));
 			}
 		});
+
+
 	}
 
 	/**

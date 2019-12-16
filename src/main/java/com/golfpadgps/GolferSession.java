@@ -8,7 +8,7 @@ import java.util.List;
 public class GolferSession extends AuthenticatedWebSession
 {
     // Logged in user
-    private User user;
+    static public User user;
 
     /**
      * Constructor
@@ -39,16 +39,20 @@ public class GolferSession extends AuthenticatedWebSession
         if (WICKET.equalsIgnoreCase(username) && WICKET.equalsIgnoreCase(password))
         {
             // Create User object
-            final User user = new User();
+            if (getUser() == null) {
 
-            user.setName(username);
+                final User user = new User();
 
-            Course course = new Course("Open American Course", 113, 120);;
+                user.setName(username);
+
+                Course course = new Course("Open American Course", 113, 120);
+                ;
 
 
-            user.setCourse(course);
+                user.setCourse(course);
 
-            setUser(user);
+                setUser(user);
+            }
 
             return true;
         }
@@ -77,7 +81,6 @@ public class GolferSession extends AuthenticatedWebSession
     public void invalidate()
     {
         super.invalidate();
-        user = null;
     }
 
     @Override
