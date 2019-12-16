@@ -1,0 +1,48 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <title>Wicket Examples - library</title>
+</wicket:head>
+<wicket:extend>
+
+    <table style="padding-top:35px; width:55%;  float:left;">
+        <tr>
+            <td align="left">Name:</td>
+            <td>
+       			<span wicket:id = "name">
+        			Huckleberry Finn
+        		</span>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">Age:</td>
+            <td>
+       			<span wicket:id = "age">
+        			 12
+        		</span>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">Handicap index:</td>
+            <td>
+        		<span wicket:id = "handicapIndex">
+        			Handicap Index
+        		</span>
+            </td>
+        </tr>
+    </table>
+    <table style="width:35%; float:left;">
+        <tr>
+            <td align="left" style="font-size:2em;">Handicap</td>
+        </tr>
+        <tr>
+            <td>
+        		<span wicket:id = "handicap" style="font-size:4em;">
+        			Mark Twain
+        		</span>
+            </td>
+        </tr>
+    </table>
+    <div style="clear:both;"></div>
+    <a src="#">Add score</a>
+</wicket:extend>
+</html>

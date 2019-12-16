@@ -1,0 +1,60 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+	<title>Wicket Examples - library</title>
+</wicket:head>
+<wicket:extend>
+
+	<table>
+		<tr>
+			<td align="right">Title:</td>
+			<td>
+				<h2 wicket:id="title" ></h2>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">Course rating:</td>
+			<td>
+				<h3 wicket:id="courseRating" ></h3>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">Slope rating:</td>
+			<td>
+				<span wicket:id="slopeRating" ></span>
+			</td>
+		</tr>
+	</table>
+
+	<table width = "100%">
+		<tr>
+			<th><span>Golfer</span></th>
+			<th><span>Age</span></th>
+			<th><span>Handicap Index</span></th>
+			<th><span>Course Handicap</span></th>
+		</tr>
+		<tr wicket:id = "golfers">
+			<td>
+				<a wicket:id = "details" href="#">
+					<span wicket:id = "golfer">Huckleberry Finn</span>
+				</a>
+			</td>
+			<td>
+				<span wicket:id = "age">
+					Mark Twain
+				</span>
+			</td>
+			<td>
+				<span wicket:id = "handicapIndex">
+					Handicap Index
+				</span>
+			</td>
+			<td>
+				<span wicket:id = "handicap">
+					Handicap Index
+				</span>
+			</td>
+		</tr>
+	</table>
+	<a src="#">Новый игрок</a>
+</wicket:extend>
+</html>
